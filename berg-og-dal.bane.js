@@ -2,7 +2,7 @@ var høyde = 170;
 var minimumHøyde = 100;
 var maksHøyde = 180;
 
-if (høyde > minimumHøyde) {
+if (høyde > minimumHøyde && høyde < maksHøyde) {
     console.log("høy nok");
 }
 else if (høyde < minimumHøyde){
@@ -10,7 +10,4 @@ else if (høyde < minimumHøyde){
 }
 else if (høyde > maksHøyde) {
     console.log("for høy");
-}
-else if (høyde < maksHøyde) {
-    console.log("høy nok");
 }
