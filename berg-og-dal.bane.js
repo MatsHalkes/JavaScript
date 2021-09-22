@@ -1,4 +1,4 @@
-var høyde = 88;
+var høyde = 99;
 var minimumHøyde = 100;
 var maksHøyde = 180;
 
