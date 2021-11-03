@@ -30,6 +30,11 @@
             rodDorEl.addEventListener("click", sjekkDor);
             gronnDorEl.addEventListener("click", sjekkDor);
             blaaDorEl.addEventListener("click", sjekkDor);
+
+            function sjekkDor(e) {
+                consloe.log(e.target);
+                console.log(e.type);
+            }
         </script>
     </body> 
 </html>
