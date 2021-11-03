@@ -1,13 +1,12 @@
-var høyde = 170;
-var minimumHøyde = 100;
-var maksHøyde = 180;
+var tall1 = Number(prompt("Skriv inn et tall:"));
+var tall2 = Number(prompt("Skriv inn et tall til:"));
 
-if (høyde > minimumHøyde && høyde < maksHøyde) {
-    console.log("høy nok");
+if (tall1>= tall2) {
+    console.log(tall1);
 }
-else if (høyde < minimumHøyde){
-    console.log("for lav");
+else if (tall2 >= tall1){
+    console.log(tall2);
 }
-else if (høyde > maksHøyde) {
-    console.log("for høy");
+else if (tall1 == tall2) {
+    console.log("Tallene er like");
 }
