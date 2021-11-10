@@ -68,7 +68,24 @@
 
                 var spillerValg = e.target.id;
 
-                console.log("Spiller valgte: " + spillerValg)
+                console.log("Spiller valgte: " + spillerValg);
+
+                var tilfeldig = Math.floor(Math.random() * 3) + 1;
+
+                var maskinValg;
+
+                if (tilfeldig === 1) {
+                    maskinValg = "stein";
+                } else if (tilfeldig === 2) {
+                    maskinValg = "saks";
+                } else if (tilfeldig === 3) {
+                    maskinValg = "papir";
+                }
+
+                console.log("Maskinen valgte: " + maskinValg);
+
+                maksinEl.src = "C:/users/mats2603/OneDrive - Oslo Kommune Utdanningsetaten/Dokumenter/GitHub/JavaScript/Stein,saks,papir/maskin_ukjent" + maskinValg + ".png";
+                
         </script>
     </body>
 </html>
