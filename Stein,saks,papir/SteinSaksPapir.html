@@ -86,6 +86,17 @@
 
                 maksinEl.src = "C:/users/mats2603/OneDrive - Oslo Kommune Utdanningsetaten/Dokumenter/GitHub/JavaScript/Stein,saks,papir/maskin_ukjent" + maskinValg + ".png";
                 
+                if (spillerValg === maskinValg) {
+                    // Ingen vant, gjør ingenting
+                } else if (spillerValg === "stein") {
+                    if (maskinValg === "saks") {
+                    // Spiller Vant
+                    spillerPoeng++;
+                } else if (maskinValg === "papir") {
+                    // Maskin vant
+                    maskinPoeng++;
+                }
+               
         </script>
     </body>
 </html>
