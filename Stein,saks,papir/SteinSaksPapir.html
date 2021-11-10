@@ -88,31 +88,56 @@
                 
                 if (spillerValg === maskinValg) {
                         // Ingen vant, gjør ingenting
-                    } else if (spillerValg === "stein") {
-                        if (maskinValg === "saks") {
-                            // Spiller Vant
-                            spillerPoeng++;
-                        } else if (maskinValg === "papir") {
-                            // Maskin vant
-                            maskinPoeng++;
-                        }
-                    } else if (spillerValg === "saks") {
-                        if (maskinValg === "papir"){
-                            //Spiller vant
-                            spillerPoeng++;
-                        } else if (maskinValg === "stein") {
-                            //Maskin vant
-                            maskinPoeng++;
-                        }
-                    } else if (spillerValg === "papir") {
-                        if (maskinValg === "stein") {
-                            //Spiller vant
-                            spillerPoeng++;
-                        } else if (maskinValg === "saks") {
-                            //Maskin vant
-                            maskinPoeng++;
-                        }
+                } else if (spillerValg === "stein") {
+                    if (maskinValg === "saks") {
+                        // Spiller Vant
+                        spillerPoeng++;
+                    } else if (maskinValg === "papir") {
+                        // Maskin vant
+                        maskinPoeng++;
                     }
+                } else if (spillerValg === "saks") {
+                    if (maskinValg === "papir"){
+                        //Spiller vant
+                        spillerPoeng++;
+                    } else if (maskinValg === "stein") {
+                        //Maskin vant
+                        maskinPoeng++;
+                    }
+                } else if (spillerValg === "papir") {
+                    if (maskinValg === "stein") {
+                        //Spiller vant
+                        spillerPoeng++;
+                    } else if (maskinValg === "saks") {
+                        //Maskin vant
+                        maskinPoeng++;
+                    }
+                }
+
+                spillerPoengEl.innerHTML = "<b>Spiller: </b>" + spillerPoeng;
+                maskinPoengEl.innerHTML = "<b>Maskin: </b>" + maskinPoeng;
+
+                if (spillerPoeng === VINNERSUM || maskinPoeng === VINNERSUM) {
+                    //Noen har vunnet
+                    //Fjerner hendelser, slik at man ikke kan klikke på bildene
+                    steinEl.removeEventListener("click", sjekkResultat);
+                    saksEl.removeEventListener("click", sjekkResultat);
+                    papirEl.removeEventListener("click", sjekkResultat);
+
+                    steinEl.style.cursor = "auto";
+                    saksEl.style.cursor = "auto";
+                    papirEl.style.cursor = "auto";
+
+                    if (spillerPoeng === VINNERSUM) {
+                        infoEl.innerHTML = "Gratulerer! Du vant!";
+                    } else {
+                        infoEl.innerHTML = "Auda! Du ble slått av en maskin...";
+                    }
+                }
+
+                function tilbakestillMaskin(){
+                    maskinEl.src = "C:/Users/mats2603/OneDrive - Oslo Kommune Utdanningsetaten/Dokumenter/GitHub/JavaScript/Stein,saks,papir/maskin_ukjent.png"
+                }
         </script>
     </body>
 </html>
