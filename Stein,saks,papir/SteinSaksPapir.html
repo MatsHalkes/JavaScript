@@ -64,7 +64,7 @@
 
                 function sjekkResultat(e) {
                     console.log("Du klikket på et bilde.");
-                }
+                
 
                 var spillerValg = e.target.id;
 
@@ -84,7 +84,7 @@
 
                 console.log("Maskinen valgte: " + maskinValg);
 
-                maksinEl.src = "C:/users/mats2603/OneDrive - Oslo Kommune Utdanningsetaten/Dokumenter/GitHub/JavaScript/Stein,saks,papir/maskin_ukjent" + maskinValg + ".png";
+                maksinEl.src = "Stein,saks,papir/" + maskinValg + ".png";
                 
                 if (spillerValg === maskinValg) {
                         // Ingen vant, gjør ingenting
@@ -134,7 +134,7 @@
                         infoEl.innerHTML = "Auda! Du ble slått av en maskin...";
                     }
                 }
-
+            }
                 function tilbakestillMaskin(){
                     maskinEl.src = "C:/Users/mats2603/OneDrive - Oslo Kommune Utdanningsetaten/Dokumenter/GitHub/JavaScript/Stein,saks,papir/maskin_ukjent.png"
                 }
