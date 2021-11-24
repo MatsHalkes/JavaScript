@@ -32,10 +32,10 @@
     <div class="innpakning">
         <p id="spillePoeng"> <b>Spiller:</b> 0 </p>
         <p id="maskinPoeng"> <b>Maskin:</b> 0 </p>
-        <img src="C:\Users\mats2603\OneDrive - Oslo Kommune Utdanningsetaten\Dokumenter\GitHub\JavaScript\Stein,saks,papir\stein.png" width="200" height="200" alt="spiller stein" id="stein">
-        <img src="C:\Users\mats2603\OneDrive - Oslo Kommune Utdanningsetaten\Dokumenter\GitHub\JavaScript\Stein,saks,papir\saks.png" width="200" height="200" alt="spiller saks" id="saks">
-        <img src="C:\Users\mats2603\OneDrive - Oslo Kommune Utdanningsetaten\Dokumenter\GitHub\JavaScript\Stein,saks,papir\papir.png" width="200" height="200" alt="spiller papir" id="papir">
-        <img src="C:\Users\mats2603\OneDrive - Oslo Kommune Utdanningsetaten\Dokumenter\GitHub\JavaScript\Stein,saks,papir\maskin_ukjent.png" width="200" height="200" alt="maskinens valg" id="maskin">
+        <img src="Bilder\stein.png" width="200" height="200" alt="spiller stein" id="stein">
+        <img src="Bilder\saks.png" width="200" height="200" alt="spiller saks" id="saks">
+        <img src="Bilder\papir.png" width="200" height="200" alt="spiller papir" id="papir">
+        <img src="Bilder\maskin_ukjent.png" width="200" height="200" alt="maskinens valg" id="maskin">
     
         <p id="info"></p>
 
@@ -55,7 +55,7 @@
                 var steinEl = document.querySelector("#stein");
                 var saksEl = document.querySelector("#saks");
                 var papirEl = document.querySelector("#papir");
-                var maskinEl = document.querySelector("#masink");
+                var maskinEl = document.querySelector("#maskin");
 
                 steinEl.addEventListener("click", sjekkResultat);
                 saksEl.addEventListener("click", sjekkResultat);
@@ -84,7 +84,7 @@
 
                 console.log("Maskinen valgte: " + maskinValg);
 
-                maksinEl.src = "Stein,saks,papir/" + maskinValg + ".png";
+                maskinEl.src = "Bilder/" + maskinValg + ".png";
                 
                 if (spillerValg === maskinValg) {
                         // Ingen vant, gjør ingenting
@@ -134,10 +134,8 @@
                         infoEl.innerHTML = "Auda! Du ble slått av en maskin...";
                     }
                 }
-            }
-                function tilbakestillMaskin(){
-                    maskinEl.src = "C:/Users/mats2603/OneDrive - Oslo Kommune Utdanningsetaten/Dokumenter/GitHub/JavaScript/Stein,saks,papir/maskin_ukjent.png"
                 }
+                
         </script>
     </body>
 </html>
